@@ -1,3 +1,12 @@
+/**
+ * Algoritmo RadixSort.
+ * Modificado de https://github.com/argonautica/sorting-algorithms/blob/master/Java/RadixSort.java
+ *
+ * @author Manuel Martinez
+ * @author Pablo Herrera
+ * @author Jorge Andrino
+ */
+
 import java.util.Arrays;
 
 public class RadixSort {
