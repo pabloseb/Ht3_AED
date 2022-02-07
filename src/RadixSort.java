@@ -64,4 +64,8 @@ public class RadixSort {
         for (int exp = 1; m/exp > 0; exp *= 10)
             countSort(arr, n, exp);
     }
+
+    static void radixsort(int arr[]) {
+        radixsort(arr, arr.length);
+    }
 }
