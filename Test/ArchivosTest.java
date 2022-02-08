@@ -6,7 +6,7 @@ public class ArchivosTest {
     @Test
     public void test(){
         Archivos.escribir();
-        int[] data = Archivos.leer(2);
+        int[] data = Archivos.leerInt(2);
         assertEquals(data.length, 2, "Error");
 
     }

@@ -24,8 +24,23 @@ public class Archivos {
         }
     }
 
-    public static int[] leer(int n) {
+    public static int[] leerInt(int n) {
         int[] data = new int[n];
+        String[] input = new String[1];
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("datos.txt"));
+            input = reader.readLine().split(" ");
+        } catch (IOException e) {
+        }
+
+        for (int i=0; i<n; i++) {
+            data[i] = Integer.valueOf(input[i]);
+        }
+        return data;
+    }
+
+    public static Comparable[] leerComp(int n) {
+        Comparable[] data = new Comparable[n];
         String[] input = new String[1];
         try{
             BufferedReader reader = new BufferedReader(new FileReader("datos.txt"));
