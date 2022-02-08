@@ -13,13 +13,14 @@ public class HeapSortTest {
 
     @Test
     public void testSortNum() {
-        Integer[] data = {102, 104, 301, 25};
+        Integer[] data = Archivos.leer(1000);
         SortAlg sortAlg = new HeapSort();
         sortAlg.sort(data);
-        Integer[] ref = {25, 102, 104, 301};
 
-        for (int i=0; i<4; i++){
-            assertEquals(data[i], ref[i], "Error");
+        for (int i=0; i<999; i++){
+            if (data[i] > data[i+1]){
+                fail("Error");
+            }
         }
     }
 

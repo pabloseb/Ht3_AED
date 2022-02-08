@@ -14,7 +14,7 @@ public class RadixSortTest {
     @Test
     public void testSort(){
 
-        Integer[] data = Archivos.leerInt(1000);
+        Integer[] data = Archivos.leer(1000);
         RadixSort.radixsort(data);
 
         for (int i=0; i<999; i++){

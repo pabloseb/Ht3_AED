@@ -13,7 +13,7 @@ public class QuickSortTest {
 
     @Test
     public void testSortNum() {
-        Integer[] data = Archivos.leerInt(1000);
+        Integer[] data = Archivos.leer(1000);
         SortAlg sortAlg = new QuickSort();
         sortAlg.sort(data);
 

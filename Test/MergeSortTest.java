@@ -13,8 +13,9 @@ public class MergeSortTest {
 
     @Test
     public void testSortNum() {
-        Integer[] data = Archivos.leerInt(1000);
-        RadixSort.radixsort(data);
+        Integer[] data = Archivos.leer(1000);
+        SortAlg sortAlg = new MergeSort();
+        sortAlg.sort(data);
 
         for (int i=0; i<999; i++){
             if (data[i] > data[i+1]){

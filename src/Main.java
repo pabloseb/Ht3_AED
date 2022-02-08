@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
 
         for (int j=0; j<100; j++) {
-            Integer[] data = Archivos.leerInt(3000);
+            Integer[] data = Archivos.leer(3000);
             SortAlg sortAlg = new QuickSort();
             sortAlg.sort(data);
             for (int i = 0; i < 2999; i++) {
