@@ -40,7 +40,7 @@ public class Archivos {
         return data;
     }
 
-     static Comparable[] ReadComparable(int n) {
+     static Comparable[] LeerComparable(int n) {
         Comparable[] data = new Comparable[n];
         String[] input = new String[1];
         try{
