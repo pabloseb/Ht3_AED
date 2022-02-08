@@ -1,26 +1,34 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.Test;
 
+/**
+ * Prueba Unitaria HeapSort.
+ *
+ * @author Manuel Martinez
+ * @author Pablo Herrera
+ * @author Jorge Andrino
+ */
+
 public class HeapSortTest {
 
     @Test
     public void testSortNum() {
-        Comparable[] data = {102, 104, 301, 25, 1};
+        Integer[] data = {102, 104, 301, 25};
         SortAlg sortAlg = new HeapSort();
         sortAlg.sort(data);
-        Comparable[] ref = {1, 25, 102, 104, 301};
+        Integer[] ref = {25, 102, 104, 301};
 
-        for (int i=0; i<5; i++){
+        for (int i=0; i<4; i++){
             assertEquals(data[i], ref[i], "Error");
         }
     }
 
     @Test
     public void testSortString() {
-        Comparable[] data = {"abc", "aab", "bac", "bab"};
+        String[] data = {"abc", "aab", "bac", "bab"};
         SortAlg sortAlg = new HeapSort();
         sortAlg.sort(data);
-        Comparable[] ref = {"aab", "abc", "bab", "bac"};
+        String[] ref = {"aab", "abc", "bab", "bac"};
 
         for (int i=0; i<4; i++){
             assertEquals(data[i], ref[i], "Error");

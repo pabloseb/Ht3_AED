@@ -24,8 +24,8 @@ public class Archivos {
         }
     }
 
-    public static int[] leerInt(int n) {
-        int[] data = new int[n];
+    public static Integer[] leerInt(int n) {
+        Integer[] data = new Integer[n];
         String[] input = new String[1];
         try{
             BufferedReader reader = new BufferedReader(new FileReader("datos.txt"));

@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class RadixSort {
 
-    static int getMax(int arr[], int n)
+    static int getMax(Integer arr[], int n)
     {
         int mx = arr[0];
         for (int i = 1; i < n; i++)
@@ -22,7 +22,7 @@ public class RadixSort {
 
     // A function to do counting sort of arr[] according to
     // the digit represented by exp.
-    static void countSort(int arr[], int n, int exp)
+    static void countSort(Integer arr[], int n, int exp)
     {
         int output[] = new int[n]; // output array
         int i;
@@ -53,7 +53,7 @@ public class RadixSort {
 
     // The main function to that sorts arr[] of size n using
     // Radix Sort
-    static void radixsort(int arr[], int n)
+    static void radixsort(Integer arr[], int n)
     {
         // Find the maximum number to know number of digits
         int m = getMax(arr, n);
@@ -65,7 +65,7 @@ public class RadixSort {
             countSort(arr, n, exp);
     }
 
-    static void radixsort(int arr[]) {
+    static void radixsort(Integer arr[]) {
         radixsort(arr, arr.length);
     }
 }
