@@ -13,12 +13,14 @@ public class RadixSortTest {
 
     @Test
     public void testSort(){
-        Integer[] data = {2, 1, 3, 5};
-        RadixSort.radixsort(data);
-        Integer[] ref = {1, 2, 3, 5};
 
-        for (int i=0; i<4; i++){
-            assertEquals(data[i], ref[i], "Error");
+        Integer[] data = Archivos.leerInt(1000);
+        RadixSort.radixsort(data);
+
+        for (int i=0; i<999; i++){
+            if (data[i] > data[i+1]){
+                fail("Error");
+            }
         }
 
         Integer[] data2 = {102, 104, 301, 25};

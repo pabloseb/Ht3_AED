@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.nio.file.Files;
 import java.io.File;
 import java.io.IOException;
+import java.lang.Math;
 
 public class Archivos {
 
@@ -12,7 +13,7 @@ public class Archivos {
         Random rand = new Random();
         String txt = "";
         for (int i=0; i<3000; i++){
-            txt += Integer.toString(rand.nextInt()) + " ";
+            txt += Integer.toString(Math.abs(rand.nextInt())) + " ";
         }
         try {
             FileWriter writer = new FileWriter("datos.txt");
