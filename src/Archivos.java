@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class Archivos {
 
-    public static void escribir() {
+     static void escribir() {
         Random rand = new Random();
         String txt = "";
         for (int i=0; i<3000; i++){
@@ -24,8 +24,8 @@ public class Archivos {
         }
     }
 
-    public static Integer[] leerInt(int n) {
-        Integer[] data = new Integer[n];
+     static int[] leer(int n) {
+        int[] data = new int[n];
         String[] input = new String[1];
         try{
             BufferedReader reader = new BufferedReader(new FileReader("datos.txt"));
@@ -39,7 +39,7 @@ public class Archivos {
         return data;
     }
 
-    public static Comparable[] leerComp(int n) {
+     static Comparable[] ReadComparable(int n) {
         Comparable[] data = new Comparable[n];
         String[] input = new String[1];
         try{
