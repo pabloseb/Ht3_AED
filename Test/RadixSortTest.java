@@ -15,7 +15,8 @@ public class RadixSortTest {
     public void testSort(){
 
         Integer[] data = Archivos.leer(1000);
-        RadixSort.radixsort(data);
+        SortAlg sortAlg = new RadixSort();
+        sortAlg.sort(data);
 
         for (int i=0; i<999; i++){
             if (data[i] > data[i+1]){
@@ -24,7 +25,7 @@ public class RadixSortTest {
         }
 
         Integer[] data2 = {102, 104, 301, 25};
-        RadixSort.radixsort(data2);
+        sortAlg.sort(data2);
         Integer[] ref2 = {25, 102, 104, 301};
 
         for (int i=0; i<4; i++){

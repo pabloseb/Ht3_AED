@@ -15,9 +15,8 @@ public class QuickSort implements SortAlg {
      *
      * @param input An array of objects
      */
-    public <T extends Comparable<T>> T[] sort(T[] input) {
+    public <T extends Comparable<T>> void sortComp(T[] input) {
         quickSort(input, 0, input.length - 1);
-        return input;
     }
 
     /**
@@ -75,5 +74,9 @@ public class QuickSort implements SortAlg {
         T temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+    }
+
+    public void sort(Integer[] input) {
+        sortComp(input);
     }
 }

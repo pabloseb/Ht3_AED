@@ -19,12 +19,9 @@ public class MergeSort implements SortAlg {
      * @param <T>      Comparable class
      * @return sorted array
      */
-    @Override
-    @SuppressWarnings("unchecked")
-    public <T extends Comparable<T>> T[] sort(T[] input) {
+    public <T extends Comparable<T>> void sortComp(T[] input) {
         T[] tmp = (T[]) new Comparable[input.length];
         doSort(input, tmp, 0, input.length - 1);
-        return input;
     }
 
     /**
@@ -78,5 +75,9 @@ public class MergeSort implements SortAlg {
         while (j <= right) {
             arr[k++] = temp[j++];
         }
+    }
+
+    public void sort(Integer[] input){
+        sortComp(input);
     }
 }

@@ -9,7 +9,7 @@
 
 import java.util.Arrays;
 
-public class RadixSort {
+public class RadixSort implements SortAlg{
 
     static int getMax(Integer arr[], int n)
     {
@@ -65,8 +65,11 @@ public class RadixSort {
             countSort(arr, n, exp);
     }
 
-    static void radixsort(Integer arr[]) {
-        radixsort(arr, arr.length);
+    public void sort(Integer[] input) {
+        radixsort(input, input.length);
+    }
+
+    public <T extends Comparable<T>> void sortComp(T[] input) {
     }
 
 

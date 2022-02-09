@@ -11,9 +11,9 @@
  */
 public class GnomeSort implements SortAlg {
 
-	public <T extends Comparable<T>> T[] sort(T[] input) {
+	public <T extends Comparable<T>> void sortComp(T[] input) {
         if (input == null || input.length < 2) {
-            return input;
+            return;
         }
         int i = 1;
         int j = 2;
@@ -32,6 +32,9 @@ public class GnomeSort implements SortAlg {
                 }
             }
         }
-        return input;
 	}
+
+	public void sort(Integer[] input){
+        sortComp(input);
+    }
 }

@@ -28,7 +28,7 @@ public class MergeSortTest {
     public void testSortString() {
         String[] data = {"abc", "aab", "bac", "bab"};
         SortAlg sortAlg = new MergeSort();
-        sortAlg.sort(data);
+        sortAlg.sortComp(data);
         String[] ref = {"aab", "abc", "bab", "bac"};
 
         for (int i=0; i<4; i++){

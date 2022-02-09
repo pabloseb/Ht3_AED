@@ -32,7 +32,7 @@ public class HeapSort implements SortAlg {
             heapify(a, a.length, i);
     }
 
-    public <T extends Comparable<T>> T[] sort(T[] input) {
+    public <T extends Comparable<T>> void sortComp(T[] input) {
         buildheap(input);
         for (int i = input.length - 1; i >= 1; i--) {
             T temp = input[0];
@@ -41,6 +41,9 @@ public class HeapSort implements SortAlg {
             heapify(input, i, 0);
         }
 
-        return input;
+    }
+
+    public void sort(Integer[] input) {
+        sortComp(input);
     }
 }
